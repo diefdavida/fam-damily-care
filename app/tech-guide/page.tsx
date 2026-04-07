@@ -1,3 +1,5 @@
+import DraftFlag from '@/components/DraftFlag'
+
 export const metadata = {
   title: 'Technology Discovery Guide — Fam Damily Cares',
 }
@@ -77,6 +79,7 @@ const CATEGORIES = [
 export default function TechGuidePage() {
   return (
     <div className="max-w-3xl mx-auto px-5 py-14">
+      <DraftFlag />
       <h1 className="text-3xl font-bold text-stone-800 mb-2">Technology Discovery Guide</h1>
       <p className="text-stone-500 text-base leading-relaxed mb-3 max-w-2xl">
         A map of what's out there — organized by the problem it solves, not by product name. This is a starting point for research, not a definitive ranking.

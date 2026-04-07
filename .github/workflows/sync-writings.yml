@@ -1,0 +1,16 @@
+name: Sync Writings from Substack
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Optional: reason for manual rebuild'
+        required: false
+        default: 'New Substack post published'
+
+jobs:
+  trigger-vercel-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        run: curl -s -X POST "${{ secrets.VERCEL_DEPLOY_HOOK_URL }}"

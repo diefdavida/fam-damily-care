@@ -57,8 +57,11 @@ export default function HomePage() {
           <img
             src={HERO_IMAGE}
             alt=""
-            className="w-full block object-contain"
-            style={{ height: '450px', backgroundColor: '#3a2008' }}
+            className="w-full block object-cover"
+            style={{
+              height: 'clamp(300px, 50vh, 500px)',
+              backgroundColor: '#3a2008'
+            }}
           />
         ) : (
           <div className="w-full min-h-[36vh] bg-teal-800" />
